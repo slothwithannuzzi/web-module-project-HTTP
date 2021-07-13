@@ -21,6 +21,10 @@ const Movie = (props) => {
             })
     }, [id]);
 
+    const handleEditButton = () => {
+        push(`/movies/edit/${id}`)
+    }
+
     return(<div className="modal-page col">
         <div className="modal-dialog">
             <div className="modal-content">
@@ -51,7 +55,7 @@ const Movie = (props) => {
                         
                         <section>
                             <span className="m-2 btn btn-dark">Favorite</span>
-                            <Link to={`/movies/edit/${movie.id}`} className="m-2 btn btn-success">Edit</Link>
+                            <button onClick = {handleEditButton} className="m-2 btn btn-success">Edit</button>
                             <span className="delete"><input type="button" className="m-2 btn btn-danger" value="Delete"/></span>
                         </section>
                     </div>

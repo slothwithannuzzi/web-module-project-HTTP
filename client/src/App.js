@@ -45,8 +45,9 @@ const App = (props) => {
         
           <Switch>
             <Route path="/movies/edit/:id">
+            <EditMovieForm {...props} movies = {movies} setMovies = {setMovies}/>
             </Route>
-
+            
             <Route path="/movies/:id">
               <Movie/>
             </Route>
